@@ -1,0 +1,56 @@
+// Define a class with overloaded constructors
+public class Rectangle {
+    // Instance variables
+    private double length;
+    private double width;
+
+    // Default constructor
+    public Rectangle() {
+        this.length = 1.0; // Default length
+        this.width = 1.0;  // Default width
+    }
+
+    // Constructor with one parameter (square)
+    public Rectangle(double side) {
+        this.length = side; 
+        this.width = side;
+    }
+
+    // Constructor with two parameters
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // Method to calculate area
+    public double getArea() {
+        return length * width;
+    }
+
+    // Method to display the dimensions
+    public void displayDimensions() {
+        System.out.println("Length: " + length);
+        System.out.println("Width: " + width);
+    }
+
+    // Main method to test constructor overloading
+    public static void main(String[] args) {
+        // Create Rectangle objects using different constructors
+        Rectangle rect1 = new Rectangle(); // Default constructor
+        Rectangle rect2 = new Rectangle(5.0); // Square constructor
+        Rectangle rect3 = new Rectangle(4.0, 6.0); // Two-parameter constructor
+
+        // Display dimensions and area of each rectangle
+        System.out.println("Rectangle 1:");
+        rect1.displayDimensions();
+        System.out.println("Area: " + rect1.getArea());
+
+        System.out.println("\nRectangle 2:");
+        rect2.displayDimensions();
+        System.out.println("Area: " + rect2.getArea());
+
+        System.out.println("\nRectangle 3:");
+        rect3.displayDimensions();
+        System.out.println("Area: " + rect3.getArea());
+    }
+}
